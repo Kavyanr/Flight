@@ -5,7 +5,11 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "flight_Details")
 public class FlightDetails {
-    @Id
+    public FlightDetails() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	@Id
 	private int flightId;
 	private String airLine;
 	private String fromPlace;

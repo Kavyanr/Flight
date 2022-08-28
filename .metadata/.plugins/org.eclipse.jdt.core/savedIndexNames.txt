@@ -14,7 +14,6 @@ INDEX VERSION 1.131+C:\Users\cogjava3135\Documents\Workspace\.metadata\.plugins\
 2584095739.index
 2734188425.index
 1585858926.index
-220208678.index
 2295564102.index
 361966900.index
 860071415.index

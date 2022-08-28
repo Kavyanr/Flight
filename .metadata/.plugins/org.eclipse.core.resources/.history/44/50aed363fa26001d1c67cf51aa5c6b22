@@ -1,0 +1,74 @@
+package com.flight.controller;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentMatchers;
+import org.mockito.Mockito;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
+import org.springframework.http.MediaType;
+import org.springframework.test.web.servlet.MockMvc;
+import org.springframework.test.web.servlet.MvcResult;
+import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
+
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.flight.model.FlightDetails;
+import com.flight.services.FlightDetailsServices;
+import com.google.inject.matcher.Matchers;
+
+@WebMvcTest
+public class FlightTestController {
+	@Autowired
+    private MockMvc mockMvc;
+ 
+    @MockBean
+    private FlightDetailsServices flightService;
+    private static ObjectMapper mapper = new ObjectMapper();
+    
+    
+ //   @Test
+//    public void testGetFlight() throws Exception {
+//        List<FlightDetails> data = new ArrayList<>();
+//        FlightDetails flight = new FlightDetails();
+//        flight.setFlightId(1);
+//        flight.setAirLine("Indigo");
+//        flight.setFromPlace("delhi");
+//        flight.setToPlace("pune");
+//        flight.setDepartureTime("12:00 am");
+//        flight.setArrivalTime("3:30 am");
+//        data.add(flight);
+//        Mockito.when(flightService.getAllFlights()).thenReturn(data);
+//        mockMvc.perform(get("/getMapping")).andExpect(status().isOk()).andExpect(jsonPath("$", Matchers.hasSize(1)))
+//                .andExpect(jsonPath("$[0].name", Matchers.equalTo("Arun")));
+//    }
+    
+    
+    @Test
+    public void testPostExample() throws Exception {
+        FlightDetails flight = new FlightDetails();
+        flight.setFlightId(1);
+        flight.setAirLine("Indigo");
+        flight.setFromPlace("delhi");
+        flight.setToPlace("pune");
+        flight.setDepartureTime("12:00 am");
+        flight.setArrivalTime("3:30 am");
+//        Mockito.when(flightService.create(ArgumentMatchers.any())).thenReturn(flight);
+//        String json = mapper.writeValueAsString(flight);
+//        mockMvc.perform(post("/postMapping").contentType(MediaType.APPLICATION_JSON).characterEncoding("utf-8")
+//                .content(json).accept(MediaType.APPLICATION_JSON)).andExpect(status().isCreated())
+//                .andExpect(jsonPath("$.id", Matchers.equalTo(1)))
+//                .andExpect(jsonPath("$.airLine", Matchers.equalTo("Indigo")));
+        String inputJson = super.mapToJson(flight);
+        MvcResult mvcResult = mvc.perform(MockMvcRequestBuilders.post(uri)
+           .contentType(MediaType.APPLICATION_JSON_VALUE).content(inputJson)).andReturn();
+        
+        int status = mvcResult.getResponse().getStatus();
+        assertEquals(201, status);
+        String content = mvcResult.getResponse().getContentAsString();
+        assertEquals(content, "Product is created successfully");
+        
+    }
+}
