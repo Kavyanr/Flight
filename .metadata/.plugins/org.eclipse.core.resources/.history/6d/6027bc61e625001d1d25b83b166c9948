@@ -1,0 +1,15 @@
+package com.flightBooking.model;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection= "flight")
+public class Flight {
+    @Id
+	private int flightId;
+	private String airline;
+	private String fromPlace;
+	private String toPlace;
+	private String departureTime;
+	private String arrivalTime;
+}

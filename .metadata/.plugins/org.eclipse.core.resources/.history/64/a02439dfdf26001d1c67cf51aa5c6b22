@@ -1,0 +1,5 @@
+package com.flight.config;
+
+public class JwtAuthenticationEntryPoint {
+
+}

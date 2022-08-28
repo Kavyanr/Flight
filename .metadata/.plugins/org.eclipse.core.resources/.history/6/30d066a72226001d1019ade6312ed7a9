@@ -1,0 +1,9 @@
+package com.flightBooking.repository;
+
+import org.springframework.data.mongodb.repository.MongoRepository;
+
+import com.flightReservation.model.BookingDetails;
+
+public interface FlightBookingRepository extends MongoRepository<BookingDetails, Long> {
+
+}

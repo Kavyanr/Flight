@@ -1,0 +1,20 @@
+package com.flightSearch.model;
+
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+import org.springframework.data.mongodb.core.mapping.DBRef;
+
+public class BookingDetails {
+
+	private int BookingId;
+	private Date departure_date;
+	private LocalDate Booking_date;
+	@DBRef
+	private FlightDetails flight;
+	private List<Passenger> passenger = new ArrayList<>();
+	private double total_amount;
+	
+}

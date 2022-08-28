@@ -1,0 +1,8 @@
+package com.flight.controller;
+
+public class JwtAuthenticationController {
+	
+	private String username;
+	private String password;
+
+}

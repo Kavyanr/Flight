@@ -1,0 +1,8 @@
+package com.flightBooking.services;
+
+import com.flightBooking.model.FlightDetails;
+
+public interface FlightDetailsServices {
+ 
+	public FlightDetails create(FlightDetails FlightDetails );
+}

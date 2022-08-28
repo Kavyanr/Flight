@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="javax.persistence.Entity"/>
+    <fullyQualifiedTypeName name="javax.persistence.Id"/>
+    <fullyQualifiedTypeName name="org.springframework.data.annotation.Id"/>
+    <fullyQualifiedTypeName name="org.springframework.data.mongodb.repository.MongoRepository"/>
+    <fullyQualifiedTypeName name="org.springframework.data.mongodb.core.mapping.Document"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.mail.javamail.JavaMailSender"/>
+    <fullyQualifiedTypeName name="com.flightBooking.model.BookingDetails"/>
+    <fullyQualifiedTypeName name="org.springframework.mail.SimpleMailMessage"/>
+    <fullyQualifiedTypeName name="com.flightBooking.services.EmailService"/>
+    <fullyQualifiedTypeName name="org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="com.flightBooking.model.Passenger"/>
+    <fullyQualifiedTypeName name="org.springframework.format.annotation.DateTimeFormat"/>
+    <fullyQualifiedTypeName name="org.springframework.format.annotation.DateTimeFormat.ISO"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestParam"/>
+</qualifiedTypeNameHistroy>

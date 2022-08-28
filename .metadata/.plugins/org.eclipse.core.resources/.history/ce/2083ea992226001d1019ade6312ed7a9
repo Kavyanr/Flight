@@ -1,0 +1,15 @@
+package com.flightBooking.services;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.flightBooking.repository.FlightBookingRepository;
+
+@Service
+public class FlightBookingServices {
+	
+	@Autowired 
+	private FlightBookingRepository bookingRepository;
+	
+
+}

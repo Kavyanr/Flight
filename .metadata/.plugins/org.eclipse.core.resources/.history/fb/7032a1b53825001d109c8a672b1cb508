@@ -1,0 +1,52 @@
+package com.flightBooking.services;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.flightBooking.model.FlightDetails;
+import com.flightBooking.repository.FlightBookingRepository;
+
+@Service
+public class FlightDetailsServiceImplementation implements FlightDetailsServices {
+
+	
+	@Autowired 
+	private FlightBookingRepository flightRepository;
+
+	@Override
+	public FlightDetails create(FlightDetails flightDetails) {
+		// TODO Auto-generated method stub
+		return flightRepository.insert(flightDetails);
+	}
+
+	@Override
+	public Optional<FlightDetails> getFlight(int flightId) {
+		// TODO Auto-generated method stub
+		return flightRepository.findById(flightId);
+	}
+
+	@Override
+	public List<FlightDetails> getAllFlights() {
+		// TODO Auto-generated method stub
+		return flightRepository.findAll();
+	}
+
+	@Override
+	public FlightDetails UpdateDetails(int flightId, FlightDetails flightDetails) {
+		// TODO Auto-generated method stub
+		Optional<FlightDetails> findData = flightRepository.findById(flightId);
+		FlightDetails flightData = findData.get();
+		flightData.setAirLine(flightDetails.getAirLine());
+		flightData.setFromPlace(flightDetails.getFromPlace());
+		
+		return flightRepository.save(null)
+	}
+
+	
+	
+	
+	
+}
