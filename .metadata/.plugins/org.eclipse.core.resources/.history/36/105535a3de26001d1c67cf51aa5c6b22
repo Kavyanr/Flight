@@ -1,8 +1,0 @@
-package com.flight.controller;
-
-public class AdminController {
-	
-	private String username;
-	private String password;
-
-}

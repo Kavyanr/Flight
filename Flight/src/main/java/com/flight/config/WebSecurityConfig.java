@@ -54,7 +54,7 @@ public class WebSecurityConfig {
 	public SecurityFilterChain filterChain(HttpSecurity httpSecurity) throws Exception {
 
 		httpSecurity.cors().and().csrf().disable()
-				.authorizeRequests().antMatchers("/authenticate", "/api/v1.0").permitAll()
+				.authorizeRequests().antMatchers("/authenticate","/api/v1.0/flight", "/api/v1.0/yatra/getAllFlight").permitAll()
 				.anyRequest().authenticated()
 				.and()
 				.exceptionHandling().authenticationEntryPoint(jwtAuthenticationEntryPoint)

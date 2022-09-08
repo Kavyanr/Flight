@@ -1,21 +1,22 @@
 package com.flight.repository;
 
 import java.util.List;
-import java.util.Optional;
 
-import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
+import org.springframework.data.mongodb.repository.ReactiveMongoRepository;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 import com.flight.model.FlightDetails;
 
+import reactor.core.publisher.Flux;
 
-@Repository
-public interface FlightDetailsRepository extends MongoRepository<FlightDetails, Integer>{
+
+
+public interface FlightDetailsRepository extends ReactiveMongoRepository<FlightDetails, Integer>{
 
 	@Query("{'fromPlace' : :#{#fromPlace}, 'toPlace' : :#{#toPlace}}")
-	List<FlightDetails> findByData(@Param("fromPlace") String fromPlace,@Param("toPlace") String toPlace);
+	Flux<FlightDetails> findByData(@Param("fromPlace") String fromPlace,@Param("toPlace") String toPlace);
 
 	
 

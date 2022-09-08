@@ -1,6 +1,5 @@
 package com.flightReservation.model;
 
-import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -14,13 +13,13 @@ public class BookingDetails {
 
 	@Id
 	private long bookingId;
-	private Date departure_date;
+	private String departure_date;
 	private String email;
 	private double total_amount;
 	private boolean cancel_booking=false;
 	private boolean payment_completed = false;
 	@DBRef
-	private Flight flight;
+	private FlightDetails flight;
 	private List<Passenger> passenger = new ArrayList<>();
 	
 	
@@ -31,10 +30,10 @@ public class BookingDetails {
 	public void setBookingId(long bookingId) {
 		this.bookingId = bookingId;
 	}
-	public Date getDeparture_date() {
+	public String getDeparture_date() {
 		return departure_date;
 	}
-	public void setDeparture_date(Date departure_date) {
+	public void setDeparture_date(String departure_date) {
 		this.departure_date = departure_date;
 	}
 	
@@ -45,10 +44,10 @@ public class BookingDetails {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	public Flight getFlight() {
+	public FlightDetails getFlight() {
 		return flight;
 	}
-	public void setFlight(Flight flight) {
+	public void setFlight(FlightDetails flight) {
 		this.flight = flight;
 	}
 	public List<Passenger> getPassenger() {
@@ -86,7 +85,7 @@ public class BookingDetails {
 				+ ", isPayment_completed()=" + isPayment_completed() + ", getClass()=" + getClass() + ", hashCode()="
 				+ hashCode() + ", toString()=" + super.toString() + "]";
 	}
-	public BookingDetails(long bookingId, Date departure_date, String email, Flight flight, List<Passenger> passenger,
+	public BookingDetails(long bookingId, String departure_date, String email, FlightDetails flight, List<Passenger> passenger,
 			double total_amount, boolean cancel_booking, boolean payment_completed) {
 		super();
 		this.bookingId = bookingId;
@@ -97,6 +96,10 @@ public class BookingDetails {
 		this.total_amount = total_amount;
 		this.cancel_booking = cancel_booking;
 		this.payment_completed = payment_completed;
+	}
+	public BookingDetails() {
+		super();
+		// TODO Auto-generated constructor stub
 	}
 	
 	

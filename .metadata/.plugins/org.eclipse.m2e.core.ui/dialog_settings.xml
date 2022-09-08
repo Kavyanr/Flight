@@ -2,9 +2,13 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="C:\Users\cogjava3135\Downloads\demo"/>
+			<item value="C:\Users\cogjava3135\Documents\Workspace\demo"/>
+			<item value="C:\Users\cogjava3135\Documents\Workspace\Flight"/>
+			<item value="C:\Users\cogjava3135\Documents\Workspace\EurekaServer"/>
+			<item value="C:\Users\cogjava3135\Documents\Workspace\ApiGateway"/>
 			<item value="C:\Users\cogjava3135\Documents\Workspace\FlightReservation"/>
 			<item value="C:\Users\cogjava3135\Documents\Workspace\FlightBooking"/>
-			<item value="C:\Users\cogjava3135\Documents\Workspace\Flight"/>
 			<item value="C:\Users\cogjava3135\Documents\Workspace\FlightDetails"/>
 		</list>
 		<list key="projectNameTemplate">
@@ -19,5 +23,11 @@
 	<section name="org.eclipse.m2e.core.pom.overview">
 	</section>
 	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+	<section name="org.eclipse.m2e.core.ui.internal.dialogs.MavenRepositorySearchDialog">
+		<item key="width" value="480"/>
+		<item key="height" value="531"/>
+		<item key="x" value="762"/>
+		<item key="y" value="141"/>
 	</section>
 </section>

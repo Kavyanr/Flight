@@ -7,7 +7,7 @@ public class Passenger {
 	@Id
 	private int passengerId;
 	private String passengerName;
-	private String passengerAge;
+	private int passengerAge;
 	private double amount;
 	public int getPassengerId() {
 		return passengerId;
@@ -21,10 +21,10 @@ public class Passenger {
 	public void setPassengerName(String passengerName) {
 		this.passengerName = passengerName;
 	}
-	public String getPassengerAge() {
+	public int getPassengerAge() {
 		return passengerAge;
 	}
-	public void setPassengerAge(String passengerAge) {
+	public void setPassengerAge(int passengerAge) {
 		this.passengerAge = passengerAge;
 	}
 	public double getAmount() {
@@ -38,7 +38,7 @@ public class Passenger {
 		return "Passenger [passengerId=" + passengerId + ", passengerName=" + passengerName + ", passengerAge="
 				+ passengerAge + ", amount=" + amount + "]";
 	}
-	public Passenger(int passengerId, String passengerName, String passengerAge, double amount) {
+	public Passenger(int passengerId, String passengerName, int passengerAge, double amount) {
 		super();
 		this.passengerId = passengerId;
 		this.passengerName = passengerName;

@@ -1,5 +1,0 @@
-package com.flight.model;
-
-public class JwtResponse {
-
-}
